@@ -1,23 +1,32 @@
 //Project table
 module.exports = function(sequelize, DataTypes) {
     var Project = sequelize.define("Project", {
+        projectId: {
+            autoIncrement: true,
+            primaryKey: true,
+            type: DataTypes.INTEGER
+        },
+        userId: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
         projectTitle: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        Rating: {
+        projectRating: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        Visibility: {
+        projectVisibility: {
             type: DataTypes.BOOLEAN,
             allowNull: false
         },
-        Summary: {
+        projectSummary: {
             type: DataTypes.STRING,
             allowNull: true
         },
-        Image: {
+        projectImage: {
             type: DataTypes.STRING,
             allowNull: true
         }

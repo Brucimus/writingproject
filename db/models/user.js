@@ -2,13 +2,13 @@ module.exports = function(sequelize, Sequelize) {
  
     var User = sequelize.define('User', {
  
-        id: {
+        userId: {
             autoIncrement: true,
             primaryKey: true,
             type: Sequelize.INTEGER
         },
 
-        email: {
+        userEmail: {
             type: Sequelize.STRING,
             validate: {
                 isEmail: true

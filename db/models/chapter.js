@@ -1,23 +1,32 @@
 //Chapter table
 module.exports = function(sequelize, DataTypes) {
     var Chapter = sequelize.define("Chapter", {
+        chapterId: {
+            autoIncrement: true,
+            primaryKey: true,
+            type: DataTypes.INTEGER
+        },
+        bookId: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
         chapterTitle: {
             type: DataTypes.STRING,
             allowNull: false
             },
-        Rating: {
+        chapterRating: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        Visibility: {
+        chapterVisibility: {
             type: DataTypes.BOOLEAN,
             allowNull: false
         },
-        Summary: {
+        chapterSummary: {
             type: DataTypes.STRING,
             allowNull: true
         },
-        Image: {
+        chapterImage: {
             type: DataTypes.STRING,
             allowNull: true
         },

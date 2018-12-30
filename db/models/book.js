@@ -1,23 +1,32 @@
 //Book table
 module.exports = function(sequelize, DataTypes) {
     var Book = sequelize.define("Book", {
+        bookId: {
+            autoIncrement: true,
+            primaryKey: true,
+            type: DataTypes.INTEGER
+        },
+        projectID: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
         bookTitle: {
             type: DataTypes.STRING,
             allowNull: false
             },
-        Rating: {
+        bookRating: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        Visibility: {
+        bookVisibility: {
             type: DataTypes.BOOLEAN,
             allowNull: false
         },
-        Summary: {
+        bookSummary: {
             type: DataTypes.STRING,
             allowNull: true
         },
-        Image: {
+        bookImage: {
             type: DataTypes.STRING,
             allowNull: true
         },
